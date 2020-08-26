@@ -50,10 +50,10 @@ RDP연결로 돌아가 아래를 진행합니다.
 4.1 Windows Start > **Server Manager**를 실행합니다.  
 4.2 **하단의 **Local Server**를 선택합니다.  
 4.3 **IE Enhanced Security Configuration**을 클릭하고 아래와 같이 설정합니다.  
-![](/OracleMigrationHoL/images/lab2/sct_windows_1.png#center)    
+![](/images/lab2/sct_windows_1.png#center)    
 4.4 바탕화면의 EC2 Feedback 을 더블클릭하여 IE를 엽니다.  
 4.5 https://aws.amazon.com/dms/schema-conversion-tool/ 로 이동해 화면 중앙의 Windows 인스톨러를 다운 받아 설치합니다.  
-![](/OracleMigrationHoL/images/lab2/sct_windows_2.png#center)    
+![](/images/lab2/sct_windows_2.png#center)    
 
 ### 5. JDBC 드라이버 다운로드    
 5.1 아래 두파일을 다운받아 Desktop에 저장합니다.
@@ -63,7 +63,7 @@ https://www.cloudhol.com/migration/mysql-connector-java-8.0.18.jar
 ### 6. Windows 방화벽 비활성화    
 6.1 Windows Start > Control Panel 에서 Firewall을 선택하고 좌측의 Turn Windows Firewall on or off를 선택합니다.  
 6.2 모든 설정을 off로 변경합니다.  
-![](/OracleMigrationHoL/images/lab2/sct_windows_5.png#center)  
+![](/images/lab2/sct_windows_5.png#center)  
 
 
 ### 7. SCT 설정 및 Schema Convert  
@@ -72,25 +72,25 @@ https://www.cloudhol.com/migration/mysql-connector-java-8.0.18.jar
 &nbsp;&nbsp;&nbsp;&nbsp;Project name: **Octank Project**  
 &nbsp;&nbsp;&nbsp;&nbsp;Source Engine: **Oracle**  
 7.3 다음 화면에서 Oracle 연결정보를 입력합니다.  
-![](/OracleMigrationHoL/images/lab2/sct_windows_4.png#center)  
+![](/images/lab2/sct_windows_4.png#center)  
 7.4 모든 정보를 입력 후 좌측 하단의 **Test Connection** 버튼을 이용해 정상적으로 연결되는지 확인 후 **Next**를 클릭합니다.  
 7.5 Schema에서 **webuser** 만 선택하고 Next를 클릭합니다.   
 7.6 Target 설정에서 아래와 같이 입력합니다.   
-![](/OracleMigrationHoL/images/lab2/sct_windows_6.png#center)   
+![](/images/lab2/sct_windows_6.png#center)   
 7.7 설정이 완료되면 좌측에서 **webuser** 스키마만 선택하고 Actions의 **Create Report**를 선택하고 레포트를 확인합니다.  
-![](/OracleMigrationHoL/images/lab2/sct_windows_9.png#center)   
+![](/images/lab2/sct_windows_9.png#center)   
 7.8 상단의 **Action Items** 탭에서 이슈를 확인합니다.  
 **No issues were found.**를 확인합니다.  
 7.9 좌측(Source)에서 모든 체크박스를 해제하고 webuser만 선택한 후 상단의 Actions메뉴에서 Convert schema를 클릭합니다   
-![](/OracleMigrationHoL/images/lab2/sct_windows_7.png#center)  
+![](/images/lab2/sct_windows_7.png#center)  
 7.9 우측에서 컨터트된 스키마가 제대로 보이는지 확인합니다.  
-![](/OracleMigrationHoL/images/lab2/sct_windows_8.png#center)  
+![](/images/lab2/sct_windows_8.png#center)  
 7.10 우측에서 **webuser** 스키마 선택 후 마우스 오른쪽 클릭하여 Apply to database를 선택합니다.   
 만약 메뉴가 나타나지 않으면 상단에서 Target연결을 다시 시도합니다.  
-![](/OracleMigrationHoL/images/lab2/sct_windows_13.png#center)  
+![](/images/lab2/sct_windows_13.png#center)  
 7.11 **webuser.carts** 테이블에서 오류가 발생했습니다.  
 아래와 같이 변경 후 테이블에 대해서만 Apply to database를 실행합니다.
-![](/OracleMigrationHoL/images/lab2/sct_windows_14.png#center) 
+![](/images/lab2/sct_windows_14.png#center)
 ```
 CREATE TABLE IF NOT EXISTS WEBUSER.CARTS (
 ID BIGINT NOT NULL AUTO_INCREMENT,
@@ -103,7 +103,7 @@ IPADDR VARCHAR(20) DEFAULT NULL,
 PRIMARY KEY (ID)
 );
 ```
-### 8. 스키마 확인 
+### 8. 스키마 확인
 8.1 AWS VPC용 Cloud9을 엽니다.  
 8.2 아래 명령으로 **mysql client**를 설치합니다
 ```
@@ -156,7 +156,7 @@ mysql --host=octankdb.cluster-cqxXXXXXXXX.ap-northeast-2.rds.amazonaws.com --por
 
 
 ### 9. SCT 서버 중단  
-9.1 필요한 스키마가 컨버트 되었으므로 서버를 중단합니다. 필요 시 다시 시작 후 사용할 수 있습니다. 
+9.1 필요한 스키마가 컨버트 되었으므로 서버를 중단합니다. 필요 시 다시 시작 후 사용할 수 있습니다.
 
 ---
 © 2020 Amazon Web Services, Inc. 또는 자회사, All rights reserved.

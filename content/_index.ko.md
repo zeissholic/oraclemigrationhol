@@ -13,7 +13,7 @@ Oracle DB 기반 웹어플리케이션을 AWS기반으로 마이그레이션하�
 
 ---
 
-![Architecture image](/OracleMigrationHoL/images/architecture.jpg)
+![Architecture image](/images/architecture.jpg)
 아키텍처에 대한 설명
 1. On-premise Oracle 기반 3-tier 아키텍처
 2. 마이그레이션 (CloudEndure이용한 Web서버, WAS는 새로 설치, DMS이용한 DB마이그레이션)
@@ -22,6 +22,5 @@ Oracle DB 기반 웹어플리케이션을 AWS기반으로 마이그레이션하�
 5. CI/CD
 6. Log 분석
 
-<p align="center">
+---
 © 2020 Amazon Web Services, Inc. 또는 자회사, All rights reserved.
-</p>

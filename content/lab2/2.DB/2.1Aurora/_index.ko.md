@@ -14,7 +14,7 @@ pre: "<b>2.1. </b>"
 &nbsp;&nbsp;&nbsp;&nbsp;VPC: **AWS**  
 &nbsp;&nbsp;&nbsp;&nbsp;Availability Zones: **ap-northeast-2a, ap-northeast-2c**  
 &nbsp;&nbsp;&nbsp;&nbsp;Subnets: **private-2a, private-2c**  
-![](/OracleMigrationHoL/images/lab2/rds_subnetg.png#center)  
+![](/images/lab2/rds_subnetg.png#center)  
 1.3 RDS > **Parameter groups** 메뉴를 선택하고 **Creat parameter group** 버튼을 클릭합니다.  
 아래와 같이 두개의 parameter group을 생성합니다.  
  * DB parameter Group  
@@ -32,11 +32,11 @@ pre: "<b>2.1. </b>"
 해당 Parameter group을 선택 후 상단에서 "lower_case_table_names"로 검색합니다.    
 **Edit Parameter**버튼을 클릭하고 값을 **1**로 변경합니다.  
 해당 파라미터는 static으로 적용을 위해서는 DB의 재시동을 필요로 합니다.  
-![](/OracleMigrationHoL/images/lab2/rds_pg.png#center) 
+![](/images/lab2/rds_pg.png#center)
 
 또한 DB의 chracter set을 변경합니다.  
 **character_set**으로 검색 후 모든 값을 **utf8mb4**로 지정하고 저장합니다.  
-![](/OracleMigrationHoL/images/lab2/rds_pg_2.png#center) 
+![](/images/lab2/rds_pg_2.png#center)
 
 1.5 EC2 > **Security Groups** 메뉴를 선택하고 **Creat Security Group** 버튼을 클릭합니다.
 
@@ -59,16 +59,16 @@ pre: "<b>2.1. </b>"
 &nbsp;&nbsp;&nbsp;&nbsp;Subnet group: **aws-db-subnetg**  
 &nbsp;&nbsp;&nbsp;&nbsp;Publicly accessible: **No**  
 &nbsp;&nbsp;&nbsp;&nbsp;Existing VPC security groups: **aws-db-sg**  
-&nbsp;&nbsp;&nbsp;&nbsp;Availability Zone: **ap-northeast-2a** 
+&nbsp;&nbsp;&nbsp;&nbsp;Availability Zone: **ap-northeast-2a**
  * Additional configuration
-&nbsp;&nbsp;&nbsp;&nbsp;DB cluster parameter group: **aws-aurora-dbcpg** 
-&nbsp;&nbsp;&nbsp;&nbsp;DB parameter group: **aws-aurora-dbpg** 
+&nbsp;&nbsp;&nbsp;&nbsp;DB cluster parameter group: **aws-aurora-dbcpg**
+&nbsp;&nbsp;&nbsp;&nbsp;DB parameter group: **aws-aurora-dbpg**
 &nbsp;&nbsp;&nbsp;&nbsp;Encryption: **No**  
 &nbsp;&nbsp;&nbsp;&nbsp;Performance Insights: **No**  
 &nbsp;&nbsp;&nbsp;&nbsp;Monitoring: **No Enhanced monitoring**  
-&nbsp;&nbsp;&nbsp;&nbsp;Maintenance: **No auto minor version upgrade** 
-&nbsp;&nbsp;&nbsp;&nbsp;Maintenance window: **Saturday 17:00 UTC 0.5hrs** 
-![](/OracleMigrationHoL/images/lab2/rds.png#center)  
+&nbsp;&nbsp;&nbsp;&nbsp;Maintenance: **No auto minor version upgrade**
+&nbsp;&nbsp;&nbsp;&nbsp;Maintenance window: **Saturday 17:00 UTC 0.5hrs**
+![](/images/lab2/rds.png#center)  
 
 
 ---

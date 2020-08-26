@@ -33,13 +33,13 @@ pre: "<b>4. </b>"
  * Rule:    
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TCP : 1521 : *WAS 서버의 Security group* : WAS**     
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TCP : 22 : *cloud9의 Security group* : Cloud9**    
-![](/OracleMigrationHoL/images/lab0/launch_db-sg.png#center)  
+![](/images/lab0/launch_db-sg.png#center)  
 1.7 Key pair는 앞에서 생성한 key pair, **migrationhol**를 선택하고 생성  
 1.8 만약 Marketplace에러가 발생할 경우 안내하는 URL로 이동 후 구독  (이는 CentOS구독을 위한 것 입니다.)     
 
 ### 2. Oracle DB 서버 연결  
 2.1 Cloud9 에서 **New Terminal**을 선택하고 새로운 탭에서 연결 수행  
-![](/OracleMigrationHoL/images/lab0/cloud9_new.png#center)  
+![](/images/lab0/cloud9_new.png#center)  
 
 2.3 Cloud9에서 WAS 서버에 접속합니다.  
 ```
@@ -62,7 +62,7 @@ sqlplus "/as sysdba"
 startup
 
 ```
-![](/OracleMigrationHoL/images/lab0/start_oracle.png#center) 
+![](/images/lab0/start_oracle.png#center)
 ```
 exit
 
@@ -73,7 +73,7 @@ exit
 lsnrctl start
 
 ```
-![](/OracleMigrationHoL/images/lab0/oracle_lsnrctl.png#center) 
+![](/images/lab0/oracle_lsnrctl.png#center)
 
 
 

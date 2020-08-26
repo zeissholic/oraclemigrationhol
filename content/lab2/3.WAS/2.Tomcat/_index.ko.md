@@ -4,8 +4,8 @@ weight: 20
 pre: "<b>3.2. </b>"
 ---
 
-### 1. Tomcat9 설치 
-1.1 JDK 설치. 
+### 1. Tomcat9 설치
+1.1 JDK 설치.
 ```
 sudo yum install java-1.8.0-openjdk-devel -y
 ```
@@ -62,7 +62,7 @@ sudo systemctl start tomcat
 sudo systemctl status tomcat
 
 ```
-![](/OracleMigrationHoL/images/lab2/was_tomcat_1.png#center)
+![](/images/lab2/was_tomcat_1.png#center)
 
 
 

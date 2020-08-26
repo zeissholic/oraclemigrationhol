@@ -14,7 +14,7 @@ pre: "<b>4. </b>"
 &nbsp;&nbsp;&nbsp;&nbsp;Description: **dms-aws-subnetg**  
 &nbsp;&nbsp;&nbsp;&nbsp;VPC: **AWS**  
 &nbsp;&nbsp;&nbsp;&nbsp;Subnets: **private-2a, private-2c**  
-![](/OracleMigrationHoL/images/lab2/dms_1.png#center) 
+![](/images/lab2/dms_1.png#center)
 
 ### 2. DMS용 Security Group 생성
 2.1 EC2 > Security Groups로 이동해 새로운 Web서버를 위한 Security group를 생성합니다.  
@@ -28,15 +28,15 @@ pre: "<b>4. </b>"
 3.1 on-premise용 Cloud9을 실행하고 DB서버여 연결합니다.  
 ```
 ssh -i migrationhol.pem centos@172.16.255.100
-``` 
+```
 3.2 oracle 유저로 switch user 합니다.  
 ```
 sudo su - oracle
-``` 
+```
 3.3 sqlplus에 연결합니다.  
 ```
 sqlplus "/as sysdba"
-``` 
+```
 3.4 아래 명령으로 Archieve 모드로 변경합니다.
 ```
 shutdown immediate;
@@ -44,7 +44,7 @@ startup mount;
 ALTER database ARCHIVELOG;
 shutdown immediate;
 startup;
-``` 
+```
 3.5 아래 명령으로 Oracle supplemental logging을 활성화 합니다.
 ```
 ALTER DATABASE ADD SUPPLEMENTAL LOG DATA;
@@ -69,7 +69,7 @@ ALTER TABLE "WEBUSER"."CARTS" ADD SUPPLEMENTAL LOG DATA (PRIMARY KEY) COLUMNS;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Replication subnet group: **dms-aws-subnetg**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Availability zone: **ap-northeast-2a**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Security Group: **dms-sg**  
-![](/OracleMigrationHoL/images/lab2/dms_2.png#center)  
+![](/images/lab2/dms_2.png#center)  
 4.4 DMS서버가 생성된 후 Details에서 Private IP를 확인합니다.
 
 
@@ -114,9 +114,9 @@ Test endpoint connection (optional)에서 AWS VPC와 dms-aws를 선택하고 **R
 &nbsp;&nbsp;&nbsp;&nbsp;Source database endpoint: **source-oracle**  
 &nbsp;&nbsp;&nbsp;&nbsp;Target database endpoint: **target-aurora**  
 &nbsp;&nbsp;&nbsp;&nbsp;Migration type: **Migrate existing data and replicate ongoing changes**  
-![](/OracleMigrationHoL/images/lab2/dms_3.png#center)  
+![](/images/lab2/dms_3.png#center)  
 &nbsp;&nbsp;&nbsp;&nbsp;Enable validation: **Yes**   
-![](/OracleMigrationHoL/images/lab2/dms_4.png#center)  
+![](/images/lab2/dms_4.png#center)  
 
 **Table Mapping**
 &nbsp;&nbsp;&nbsp;&nbsp;Editing mode: **Guided UI**   
@@ -127,10 +127,10 @@ Test endpoint connection (optional)에서 AWS VPC와 dms-aws를 선택하고 **R
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action: **include**  
 
 7.3 Task 정상 동작을 확인합니다.
-![](/OracleMigrationHoL/images/lab2/dms_5.png#center) 
+![](/images/lab2/dms_5.png#center)
 
 7.4 On-premise 어플리케이션에서 직접 데이터를 입력해 데이터가 정상적으로 복제되는지 확인합니다.
-![](/OracleMigrationHoL/images/lab2/dms_6.png#center) 
+![](/images/lab2/dms_6.png#center)
 
 ---
 © 2020 Amazon Web Services, Inc. 또는 자회사, All rights reserved.

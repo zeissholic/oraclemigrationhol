@@ -13,14 +13,14 @@ pre: "<b>2. </b>"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Peering connection name tag : **px-onprem-aws**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VPC (Requester) : **AWS**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VPC (Accepter) : **on-premise**  
-![](/OracleMigrationHoL/images/lab1/vpc_peering_1.png#center)
+![](/images/lab1/vpc_peering_1.png#center)
 
 1.2 좌측의 **Filter by VPC**에서 **on-premise**를 선택합니다.
-![](/OracleMigrationHoL/images/lab1/vpc_onprem.png#center)
+![](/images/lab1/vpc_onprem.png#center)
 
 1.2 좌측의 **Peering Connections**메뉴에서 **Actions**를 **Accept Request**를 선택합니다.
-![](/OracleMigrationHoL/images/lab1/vpc_peering_2.png#center)
-![](/OracleMigrationHoL/images/lab1/vpc_peering_3.png#center)
+![](/images/lab1/vpc_peering_2.png#center)
+![](/images/lab1/vpc_peering_3.png#center)
 
 ### 2. Route Table 수정  
 2.1 VPC메뉴에서 on-premise VPC로 Filtering 적용합니다.  

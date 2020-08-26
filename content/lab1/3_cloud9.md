@@ -5,7 +5,7 @@ pre: "<b>2. </b>"
 ---
 
 **원활한 핸즈온을 위해 AWS VPC를 위한 Cloud9 환경을 구축합니다.**   
- 
+
 ### 1. Cloud9 환경 생성  
 1.1 **Cloud9** 메뉴에서 **Create environment**를 클릭합니다  
 1.2 Name을 **aws-cloud9**로 설정하고 Next를 클릭합니다  
@@ -14,8 +14,8 @@ pre: "<b>2. </b>"
 
 ### 2. Key Pair 업로드  
 2.1 Cloud9 화면에서 File > **Upload Local Files**를 선택하고 3.1에서 생성한 **migrationhol.pem**을 선택하고 업로드 합니다.
-![keypair](/OracleMigrationHoL/images/lab0/cloud9_upload.png#center) 
-2.2 아래 명령으로 key pair의 권한을 수정합니다. 
+![keypair](/images/lab0/cloud9_upload.png#center)
+2.2 아래 명령으로 key pair의 권한을 수정합니다.
 ```
 chmod 600 migrationhol.pem
 ```

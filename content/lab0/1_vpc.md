@@ -10,7 +10,7 @@ pre: "<b>1. </b>"
 ### 1. Keypair 생성  
 1.1 EC2 > Network & Security > Key Pairs 메뉴에서 **Create Key Pair**를 클릭합니다.  
 1.2 Key pair name은 **migrationhol**으로 입력하고 File format은 **pem**을 선택하고 Create key pair를 클릭해 keypair를 생성합니다.
-![keypair](/OracleMigrationHoL/images/lab0/keypair.png#center)
+![keypair](/images/lab0/keypair.png#center)
 
 ### 2. VPC 생성  
 2.1 VPC메뉴를 클릭하고 상단의 **Launch VPC Wizard**를 클릭합니다.  
@@ -29,13 +29,12 @@ pre: "<b>1. </b>"
 2.5 VPC 생성이 완료될 때까지 기다린 후 다음 과정을 진행하십시오.
 
 아래 이미지의 설정을 참고하십시오.
-![keypair](/OracleMigrationHoL/images/lab0/vpc.png#center)
+![keypair](/images/lab0/vpc.png#center)
 
 2.6 VPC와 Subnet의 ID를 기록합니다.
-![](/OracleMigrationHoL/images/lab0/vpc_id.png#center)
-![](/OracleMigrationHoL/images/lab0/subnet_id.png#center)
+![](/images/lab0/vpc_id.png#center)
+![](/images/lab0/subnet_id.png#center)
 
 
 ---
 © 2020 Amazon Web Services, Inc. 또는 자회사, All rights reserved.
-

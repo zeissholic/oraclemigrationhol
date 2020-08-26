@@ -31,7 +31,7 @@ pre: "<b>4. </b>"
 &nbsp;&nbsp;&nbsp;&nbsp;VPC: **AWS**  
 &nbsp;&nbsp;&nbsp;&nbsp;Add Inbound Rules  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TCP : 8080 : *Web 서버용 Security Group* : Web**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TCP : 8080 : aws-alb-sg : ALB** 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TCP : 8080 : aws-alb-sg : ALB**
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TCP : 22 : AWS VPC용 Cloud9의 Security Group : Cloud9**  
 
 

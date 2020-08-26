@@ -32,13 +32,13 @@ pre: "<b>4. </b>"
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TCP : 8080 : *web 서버의 Security group* : WEB**    
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TCP : 8080 : *cloud9의 Security group* : Cloud9**     
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TCP : 22 : *cloud9의 Security group* : Cloud9**    
-![](/OracleMigrationHoL/images/lab0/launch_was-sg.png#center)  
+![](/images/lab0/launch_was-sg.png#center)  
 1.7 Key pair는 앞에서 생성한 key pair, **migrationhol**를 선택하고 생성  
 1.8 만약 Marketplace에러가 발생할 경우 안내하는 URL로 이동 후 구독  (이는 CentOS구독을 위한 것 입니다.)     
 
 ### 2. WAS 서버 연결  
 2.1 Cloud9 에서 **New Terminal**을 선택하고 새로운 탭에서 연결 수행  
-![](/OracleMigrationHoL/images/lab0/cloud9_new.png#center)  
+![](/images/lab0/cloud9_new.png#center)  
 
 2.3 Cloud9에서 WAS 서버에 접속합니다.  
 ```

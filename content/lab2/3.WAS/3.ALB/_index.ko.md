@@ -20,12 +20,12 @@ pre: "<b>3.3. </b>"
 &nbsp;&nbsp;&nbsp;&nbsp;Protocol: **HTTP**  
 &nbsp;&nbsp;&nbsp;&nbsp;Port: **8080**  
 1.4 다음 화면에서 하단의 **aws-was-2a**를 선택 후 중앙의 **Add to registered** 버튼을 클릭하여 등록합니다.   
-![](/OracleMigrationHoL/images/lab2/alb_1.png#center)   
+![](/images/lab2/alb_1.png#center)   
 
 ### 2. ALB 연결 확인  
 2.1 AWS 콘솔에서 EC2 > **Load Balance** 아래에서 **alb-aws**를 선택하고 아래 Description 탭에서 **DNS name**을 확인하고 복사합니다.  
 2.2 브라우저에서 주소창에 붙여넣은 후 아래 화면이 뜨는지 확인합니다.   
-![](/OracleMigrationHoL/images/lab2/was_tomcat_2.png#center) 
+![](/images/lab2/was_tomcat_2.png#center)
 
 
 ---
