@@ -1,5 +1,5 @@
 # baseURL 변경
-baseURL = "/OracleMigrationHoL/"
+baseURL = "/oraclemigrationhol/"
 languageCode = "ko-KR"
 defaultContentLanguage = "ko"
 
