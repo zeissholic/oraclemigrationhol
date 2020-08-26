@@ -1,5 +1,5 @@
 # baseURL 변경
-baseURL = "/oraclemigrationhol/"
+baseURL = "https://master.d3l7an78xzgj8t.amplifyapp.com/"
 languageCode = "ko-KR"
 defaultContentLanguage = "ko"
 
