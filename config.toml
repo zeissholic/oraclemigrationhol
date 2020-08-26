@@ -1,0 +1,40 @@
+# baseURL 변경
+baseURL = "/OracleMigrationHoL/"
+languageCode = "ko-KR"
+defaultContentLanguage = "ko"
+
+# title 변경
+title = "Migrating Oracle-based Web Application to AWS"
+theme = "hugo-theme-learn"
+themesdir = "."
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir= true
+#ignoreFiles = [ "\\.*lab3\\.*" ]
+
+# description, author 변경
+[params]
+  # Prefix URL to edit current page. Will display an "Edit this page" button on top right hand corner of every page.
+  # Useful to give opportunity to people to create merge request for your doc.
+  # See the config.toml file from this documentation site to have an example.
+  #editURL = ""
+  # Author of the site, will be used in meta information
+  author = "Injae Park"
+  # Description of the site, will be used in meta information
+  description = "Migrating Oracle-based Web Application to AWS"
+  showVisitedLinks = true
+  disableBreadcrumb = false
+  disableNextPrev = false
+  themeVariant = "aws"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[Languages.ko]
+title = "Oracle DB 기반 웹어플리케이션 마이그레이션"
+weight = 1
+languageName = "한국어"
+
+[[Languages.ko.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> 크레딧"
+url = "/credits/"
+weight = 30
