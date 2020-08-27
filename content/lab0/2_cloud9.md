@@ -5,7 +5,7 @@ pre: "<b>2. </b>"
 ---
 
 **원활한 핸즈온을 위해 Cloud9 환경을 구축합니다.**   
-실습은 한국 리전에서 진행합니다. 현재 리전이 **Asia Pacific (Seoul):ap-northeast-2**인지 확인합니다.
+실습은 한국 리전에서 진행합니다. 현재 리전이 **Asia Pacific (Seoul):ap-northeast-2**인지 확인합니다.  
 
 ### 1. Cloud9 환경 생성  
 1.1 **Cloud9** 메뉴에서 **Create environment**를 클릭합니다  

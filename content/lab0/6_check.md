@@ -11,7 +11,7 @@ pre: "<b>5. </b>"
 ![](/images/lab0/web_public_ip.png#center)  
 
 ### 2. WAS 서버 연결  
-2.1 웹브라우저에서 http://<<*Web서버 Public IP*>>/shop/ 로 연결합니다.
+2.1 웹브라우저에서 http://<<*Web서버 Public IP*>>/shop/ 로 연결합니다.  
 ![](/images/lab0/web_main.png#center)  
 
 

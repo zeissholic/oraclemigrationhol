@@ -14,7 +14,7 @@ pre: "<b>1. </b>"
 
 ### 2. VPC 생성  
 2.1 VPC메뉴를 클릭하고 상단의 **Launch VPC Wizard**를 클릭합니다.  
-2.2 **VPC with Public and Private Subnets**를 선택하고 **Select**버튼을 클릭합니다.
+2.2 **VPC with Public and Private Subnets**를 선택하고 **Select**버튼을 클릭합니다.  
 2.3 VPC 설정을 아래와 같이 입력합니다.  
  * IPv4 CIDR block: **172.16.0.0/16**  
  * VPC name: **on-premise**  

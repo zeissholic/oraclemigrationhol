@@ -12,13 +12,13 @@ pre: "<b>1. </b>"
 {{% /notice %}}
 
 ### 준비 사항
-인프라 구성을 위한 사전 준비사항을 설명합니다.
-1. 본인의 AWS어카운트 번호를 확인합니다. 본인 혹은 Event Engine의 AWS어카운트로 로그인 한 후 우측 상단의 계정명을 클릭하고 아래 메뉴에서 **"My Account"를 클릭**합니다.
+인프라 구성을 위한 사전 준비사항을 설명합니다.  
+1. 본인의 AWS어카운트 번호를 확인합니다. 본인 혹은 Event Engine의 AWS어카운트로 로그인 한 후 우측 상단의 계정명을 클릭하고 아래 메뉴에서 **"My Account"를 클릭**합니다.  
 ![account id 1](/images/lab0/pre-accountid-1.png#center)
-2. **"Account Settings"에서 Account Id**를 확인 합니다.
+2. **"Account Settings"에서 Account Id**를 확인 합니다.  
 ![account id 1](/images/lab0/pre-accountid-2.png#center)
-3. 해당 어카운트 ID를 **ijpark@amazon.com**ㄴ에 이메일로 전달하여 AMI공유를 요청합니다.
-4. 공유확인 메일을 받은 후 다음 과정을 진행합니다.
+3. 해당 어카운트 ID를 **ijpark@amazon.com**ㄴ에 이메일로 전달하여 AMI공유를 요청합니다.  
+4. 공유확인 메일을 받은 후 다음 과정을 진행합니다.  
 
 
 ---
