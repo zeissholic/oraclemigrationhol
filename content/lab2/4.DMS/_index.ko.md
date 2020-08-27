@@ -8,7 +8,7 @@ pre: "<b>4. </b>"
 
 ### 1. DMS Subnet gorups 생성  
 1.1 AWS 콘솔에서 DMS메뉴로 이동합니다.  
-1.2 좌측의 **Subnet gorups**을 선택하고 **Create subnet group**을 클릭합니다.
+1.2 좌측의 **Subnet gorups**을 선택하고 **Create subnet group**을 클릭합니다.  
 1.3 아래 설정을 등록합니다.  
 &nbsp;&nbsp;&nbsp;&nbsp;Name: **dms-aws-subnetg**  
 &nbsp;&nbsp;&nbsp;&nbsp;Description: **dms-aws-subnetg**  
@@ -16,7 +16,7 @@ pre: "<b>4. </b>"
 &nbsp;&nbsp;&nbsp;&nbsp;Subnets: **private-2a, private-2c**  
 ![](/images/lab2/dms_1.png#center)
 
-### 2. DMS용 Security Group 생성
+### 2. DMS용 Security Group 생성  
 2.1 EC2 > Security Groups로 이동해 새로운 Web서버를 위한 Security group를 생성합니다.  
 &nbsp;&nbsp;&nbsp;&nbsp;Security group name: **dms-sg**  
 &nbsp;&nbsp;&nbsp;&nbsp;Description: **dms-sg**  
@@ -75,9 +75,9 @@ ALTER TABLE "WEBUSER"."CARTS" ADD SUPPLEMENTAL LOG DATA (PRIMARY KEY) COLUMNS;
 
 ### 5. on-premise, AWS DB에 dms-sg 접근 허용  
 5.1 EC2 > Security Groups로 이동합니다.  
-5.2 **on-premise-db-sg**에 아래 inbound rule 추가
+5.2 **on-premise-db-sg**에 아래 inbound rule 추가  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TCP : 1521 : DMS서버의 IP : DMS**  
-5.3 **aws-db-sg**에 아래 inbound rule 추가
+5.3 **aws-db-sg**에 아래 inbound rule 추가  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**TCP : 3306 : dms-sg : DMS**  
 
 ### 6. Source Endpoints 생성  
@@ -122,14 +122,15 @@ Test endpoint connection (optional)에서 AWS VPC와 dms-aws를 선택하고 **R
 &nbsp;&nbsp;&nbsp;&nbsp;Editing mode: **Guided UI**   
  * Selection rules  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Schema: **Enter a schema**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Schema name: **webuser**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Schema name: **WEBUSER**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Table name: **%**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action: **include**  
 
-7.3 Task 정상 동작을 확인합니다.
-![](/images/lab2/dms_5.png#center)
 
-7.4 On-premise 어플리케이션에서 직접 데이터를 입력해 데이터가 정상적으로 복제되는지 확인합니다.
+### 9. 동기화 확인
+9.1 Task 정상 동작을 확인합니다.  
+![](/images/lab2/dms_5.png#center)
+9.2 On-premise 어플리케이션에서 직접 데이터를 입력해 데이터가 정상적으로 복제되는지 확인합니다.  
 ![](/images/lab2/dms_6.png#center)
 
 ---
