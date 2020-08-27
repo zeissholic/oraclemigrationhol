@@ -4,14 +4,16 @@ weight: 40
 pre: "<b>4.4 </b>"
 ---
 
-**실습에 대한 설명을 적습니다.** <br/><br/>
+**CD/CD 배포를 위한 파이프라인을 구성합니다.** <br/><br/>
+{{% notice info %}}
+실습 PC에 git이 설치되어 있다는 것을 가정합니다. 또한 Git credential을 위해 반드시 IAM User로 로그인 하셔야 합니다. 
+{{% /notice %}}
 
-### 큰제목 
-1. 순서를 가이드합니다.
 
 
 ---
 © 2020 Amazon Web Services, Inc. 또는 자회사, All rights reserved.
+
 
 
 
