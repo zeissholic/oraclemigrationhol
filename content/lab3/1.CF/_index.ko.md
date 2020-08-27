@@ -48,7 +48,7 @@ pre: "<b>4.1 </b>"
 ![](/images/lab3/cf_6.png#center)   
 
 {{% notice info %}}
-위의 Behavior 설정은 기본 설정을 캐싱 안함 (TTL=0)으로 설정하고 캐싱할 대상을 추가적으로 등록했다면, 반대로 캐싱해야하는 파일의 유형이 다양하다면 기본 설정을 캐싱함으로 설정하고 동적페이지(예를 들면, .html, .do, .jsp 등)만 캐싱안하는 방식으로 처리할 수 있습니다.
+위의 Behavior 설정은 기본 설정을 캐싱 안함 (TTL=0)으로 설정하고 캐싱할 대상을 추가적으로 등록했다면, 반대로 캐싱해야하는 파일의 유형이 다양하다면 기본 설정을 캐싱함으로 설정하고 동적페이지(예를 들면, .html, .do, .jsp 등)만 캐싱안함으로 처리할 수 있습니다.
 {{% /notice %}}
 
 ### 3. 연결 확인   
@@ -58,6 +58,13 @@ pre: "<b>4.1 </b>"
  * 페이지를 refresh한 후 개발자 환경에서 **x-cache: Hit from cloudfront** 로 변경된 것을 확인합니다.  
 
 ![](/images/lab3/cf_7.png#center) 
+
+
+{{% notice info %}}
+소유한 도메인에 Certificate Manager에서 발행한 인증서를 사용하고자 할 경우 아래 링크를 참고하십시오.  
+https://aws.amazon.com/ko/premiumsupport/knowledge-center/install-ssl-cloudfront/
+{{% /notice %}}
+
 
 ---
 © 2020 Amazon Web Services, Inc. 또는 자회사, All rights reserved.
