@@ -1,13 +1,11 @@
 ---
-title: Auto Scaling 적용
+title: Auto Sacling 적용
 weight: 30
 pre: "<b>4.3 </b>"
 ---
 
-**실습에 대한 설명을 적습니다.** <br/><br/>
+**트래픽 증가에 따라 WAD 및 Database확장을 위한 Auto Scaling 설정을 적용합니다..** <br/><br/>
 
-### 큰제목 
-1. 순서를 가이드합니다.
 
 
 ---

@@ -1,7 +1,7 @@
 ---
-title: LOG분석 적용
-weight: 50
-pre: "<b>4.5 </b>"
+title: 서비스 모니터링
+weight: 70
+pre: "<b>4.7 </b>"
 ---
 
 **실습에 대한 설명을 적습니다.** <br/><br/>

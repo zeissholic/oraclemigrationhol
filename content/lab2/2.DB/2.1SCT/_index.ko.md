@@ -137,19 +137,26 @@ PASSWD VARCHAR(20) DEFAULT NULL,
 PRIMARY KEY (ID)
 );
 ```
-8.5 아래 스크립트를 이용해 추가 인덱스를 생성합니다.
+8.5 아래 SQL문으로 ID값을 자동으로 증가하도록 합니다.
+```
+ALTER TABLE USERS MODIFY COLUMN ID INT AUTO_INCREMENT;
+ALTER TABLE CARTS MODIFY COLUMN ID INT AUTO_INCREMENT; 
+ALTER TABLE CARTS MODIFY TARGET_DATE timestamp DEFAULT CURRENT_TIMESTAMP;
+```
+
+8.6 아래 스크립트를 이용해 추가 인덱스를 생성합니다.
 ```
 CREATE INDEX IDX_USER_001 ON WEBUSER.USERS (USERNAME);
 CREATE INDEX IDX_CART_001 ON WEBUSER.CARTS (USERNAME);
 CREATE INDEX IDX_CART_002 ON WEBUSER.CARTS (USERNAME, ID DESC);
 ```
-8.6 **webuser** 사용자를 생성하고 권한을 부여합니다.
+8.7 **webuser** 사용자를 생성하고 권한을 부여합니다.
 ```
 CREATE USER 'webuser'@'%' IDENTIFIED BY 'qwert12345';
 GRANT ALL PRIVILEGES ON WEBUSER.* TO 'webuser'@'%';
 
 ```
-8.7 **webuser** 로 로그인되는지 확인합니다.
+8.8 **webuser** 로 로그인되는지 확인합니다.
 ```
 mysql --host=octankdb.cluster-cqxXXXXXXXX.ap-northeast-2.rds.amazonaws.com --port=3306  --database=WEBUSER --user=webuser --password=qwert12345
 ```

@@ -1,5 +1,5 @@
 ---
-title: Secret Manager 적용
+title: log 분석 적용
 weight: 60
 pre: "<b>4.6 </b>"
 ---

@@ -53,6 +53,12 @@ sudo systemctl restart tomcat
 sudo systemctl status tomcat
 ```
 
+1.5 서버 시동 시 Tomcat을 자동시작하도록 합니다.  
+```
+sudo systemctl enable tomcat
+```
+
+
 1.6 **ALB DNS name/shop** 에 연결해 화면이 정상적으로 출력되는지 확인합니다.  
 ![](/images/lab2/alb_2.png#center)
 

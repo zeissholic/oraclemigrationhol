@@ -17,8 +17,9 @@ pre: "<b>3.3. </b>"
 &nbsp;&nbsp;&nbsp;&nbsp;Target group: **New Target group**  
 &nbsp;&nbsp;&nbsp;&nbsp;Name: **tg-aws**  
 &nbsp;&nbsp;&nbsp;&nbsp;Target type: **instance**  
-&nbsp;&nbsp;&nbsp;&nbsp;Protocol: **HTTP**  
+&nbsp;&nbsp;&nbsp;&nbsp;Health check path: **/shop/healthcheck**  
 &nbsp;&nbsp;&nbsp;&nbsp;Port: **8080**  
+&nbsp;&nbsp;&nbsp;&nbsp;Protocol: **HTTP**  
 1.4 다음 화면에서 하단의 **aws-was-2a**를 선택 후 중앙의 **Add to registered** 버튼을 클릭하여 등록합니다.   
 ![](/images/lab2/alb_1.png#center)   
 
