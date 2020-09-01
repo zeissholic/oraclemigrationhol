@@ -52,8 +52,9 @@ pre: "<b>4.5 </b>"
 ```
 
 ### 3. Tomcat 설정 변경
-3.1 아래 코드를 이용해 Tomcat의 DB 연결 설정을 변경합니다. 이는 기존의 DB암호를 설정파일에 노출하지 않고 암호화하기 위한 방식과 동일합니다.
-여기서는 DB의 ID/PW만을 secret으로 처리했으나 DB endpoint, port 등도 처리 가능합니다.
+3.1 아래 코드를 이용해 Tomcat의 DB 연결 설정을 변경합니다. 이는 기존의 DB암호를 설정파일에 노출하지 않고 암호화하기 위한 방식과 동일합니다.  
+여기서는 DB의 ID/PW만을 secret으로 처리했으나 DB endpoint, port 등도 처리 가능합니다.  
+해당 핸즈온에서는 이미 컴파일된 jar파일을 사용합니다.  
 ```
 package me.ijpark.tomcat;
 
