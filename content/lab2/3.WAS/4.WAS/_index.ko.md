@@ -14,9 +14,12 @@ wget https://www.cloudhol.com/migration/mariadb-java-client-2.6.2.jar
 
 wget https://www.cloudhol.com/migration/redisson-all-3.13.3.jar
 wget https://www.cloudhol.com/migration/redisson-tomcat-9-3.13.3.jar
+wget https://www.cloudhol.com/migration/gson-2.8.6.jar
+wget https://www.cloudhol.com/migration/aws-java-sdk-secretsmanager-1.11.314.jar
+wget https://www.cloudhol.com/migration/aws-java-sdk-core-1.11.670.jar
 
-chown tomcat:tomcat mariadb*.jar redisson*.jar
-chmod 640 mariadb*.jar redisson*.jar
+chown tomcat:tomcat *.jar
+chmod 640 *.jar
 ```
 1.2 db 연결정보를 추가합니다.  
 ```

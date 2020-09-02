@@ -28,14 +28,8 @@ pre: "<b>2.1. </b>"
 &nbsp;&nbsp;&nbsp;&nbsp;Group name: **aws-aurora-dbcpg**  
 &nbsp;&nbsp;&nbsp;&nbsp;Description: **aws-aurora-dbcpg**  
 
-1.4 앞에서 생성한 **aws-aurora-dbcpg**에서 **lower_case_table_names**를 변경합니다.  
-해당 Parameter group을 선택 후 상단에서 "lower_case_table_names"로 검색합니다.    
-**Edit Parameter**버튼을 클릭하고 값을 **1**로 변경합니다.  
-해당 파라미터는 static으로 적용을 위해서는 DB의 재시동을 필요로 합니다.  
-![](/images/lab2/rds_pg.png#center)
-
-또한 DB의 chracter set을 변경합니다.  
-**character_set**으로 검색 후 모든 값을 **utf8mb4**로 지정하고 저장합니다.  
+1.4 앞에서 생성한 **aws-aurora-dbcpg**에서 DB의 chracter set을 변경합니다.  
+해당 Parameter group을 선택 후 상단에서 **character_set**으로 검색 후 모든 값을 **utf8mb4**로 지정하고 저장합니다.  
 ![](/images/lab2/rds_pg_2.png#center)
 
 1.5 EC2 > **Security Groups** 메뉴를 선택하고 **Creat Security Group** 버튼을 클릭합니다.

@@ -11,14 +11,14 @@ pre: "<b>4.5 </b>"
 
 1.2 아래 내용을 입력합니다.
 &nbsp;&nbsp;&nbsp;&nbsp;Select secret type: **Credentials for RDS database**    
-&nbsp;&nbsp;&nbsp;&nbsp;User name: **webuser** 
-&nbsp;&nbsp;&nbsp;&nbsp;Password: **qwert12345** 
-&nbsp;&nbsp;&nbsp;&nbsp;Select which RDS database this secret will access: **octankdb** 
-&nbsp;&nbsp;&nbsp;&nbsp;**NEXT**
+&nbsp;&nbsp;&nbsp;&nbsp;User name: **webuser**  
+&nbsp;&nbsp;&nbsp;&nbsp;Password: **qwert12345**  
+&nbsp;&nbsp;&nbsp;&nbsp;Select which RDS database this secret will access: **octankdb**  
+&nbsp;&nbsp;&nbsp;&nbsp;**NEXT**  
 
-&nbsp;&nbsp;&nbsp;&nbsp;Secret name: **mbp/shop/rds2** 
-&nbsp;&nbsp;&nbsp;&nbsp;**NEXT**
-&nbsp;&nbsp;&nbsp;&nbsp;**NEXT**
+&nbsp;&nbsp;&nbsp;&nbsp;Secret name: **mbp/shop/rds2**   
+&nbsp;&nbsp;&nbsp;&nbsp;**NEXT**  
+&nbsp;&nbsp;&nbsp;&nbsp;**NEXT**  
 
 ### 2. EC2 인스턴스의 IAM role 변경
 2.1 AWS 콘솔에서 **IAM** 메뉴에서 좌측의 **Roles**로 이동 후 **mbpshop_role**를 검색 후 선택합니다.   
@@ -233,6 +233,36 @@ sudo systemctl status tomcat
 
 
 ### 6. 어플리케이션의 정상 작동여부를 확인합니다.
+
+
+### 7. CI/CD로 두 서버에 모두 배포테스트를 수행합니다.
+7.1 우선 배포시 설정을 변경합니다. AWS 콘솔의 **CodeDeploy** 메뉴로 이동합니다. **Deploy 아래 Applications**를 선택하고 우측의 **mbpshop**을 클릭합니다.   
+
+7.2 아래 Deployment groups에서 **dg-mbpshop**을 선택합니다.
+
+7.3 우측 상단의 **Edit** 버튼을 클릭하고 아래 내용을 추가 혹은 변경합니다.
+&nbsp;&nbsp;&nbsp;&nbsp;Tag에서: Key **aws:autoscaling:groupName**, Value **asg-aws-was** 추가   
+&nbsp;&nbsp;&nbsp;&nbsp;Deployment settings: **CodeDeployDefault.HalfAtATime** 선택  
+&nbsp;&nbsp;&nbsp;&nbsp;Enable load balancing: **선택**  
+&nbsp;&nbsp;&nbsp;&nbsp;Choose a target group: **tg-aws**  
+
+7.3 mbpshop 소스를 변경합니다.  
+DNA/mbpshop/WebContent/common 로 이동합니다.  
+```
+vi header.jsp
+```
+버전을 2.3 으로 변경합니다.  
+
+7.4 아래 명령으로 git commit을 수행합니다.  
+```
+git diff
+git add header.jsp
+git commit -m "version updated"
+git push -u origin master
+```
+
+7.5 CodePipeline 메뉴에서 배포가 성공적인지 확인 합니다.  
+![](/images/lab3/cp_1.png#center) 
 
 ---
 © 2020 Amazon Web Services, Inc. 또는 자회사, All rights reserved.
