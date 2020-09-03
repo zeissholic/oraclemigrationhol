@@ -1,5 +1,5 @@
 ---
-title: Elastic Search 저장
+title: S3-Lambda-Elasticsearch
 weight: 30
 pre: "<b>4.5.3 </b>"
 ---
