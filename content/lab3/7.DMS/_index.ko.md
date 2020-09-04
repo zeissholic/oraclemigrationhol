@@ -117,7 +117,7 @@ VPC를 AWS선택하고 Replication instance를 dms-aws를 선택후 성공적으
 
 
 3.5 간단히 아래와 같이 배치해 실제 접속 로그와 매출의 관계를 비교해서 살펴볼 수 있습니다.
-![](/images/lab3/kibana_20.png#center30)
+![](/images/lab3/kibana_20.png#center)
 
 
 
