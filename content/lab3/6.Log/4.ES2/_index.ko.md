@@ -6,6 +6,10 @@ pre: "<b>4.5.4 </b>"
 
 **SCT용으로 만든 윈도우 서버에 로그인 해 Kibana를 사용합니다.** <br/><br/>
 
+{{% notice info %}}
+Elasticsearch Service를 Public하게 노춣하고 Cognito를 이용해 인증할 수 있습니다. 아래 링크를 참고하십시오. https://docs.aws.amazon.com/ko_kr/elasticsearch-service/latest/developerguide/es-cognito-auth.html
+{{% /notice %}}
+
 ### 1. SCT 서버 시작 
 1.1 AWS 콘솔에서 **EC2** 메뉴에서 **sct-svr**을 시작하고 로그인 합니다.**    
 
