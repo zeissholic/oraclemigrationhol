@@ -6,6 +6,10 @@ pre: "<b>4.5 </b>"
 
 **Secret Manager를 활용해 WAS에서 DB연결 시 정보를 secret 형태로 관리합니다.** <br/><br/>
 
+{{% notice info %}}
+WAS와 DB사이의 연결은 IAM 자격증명을 이용한 방식으로도 제어할 수 있습니다. 아래 링크를 참고하세요. https://aws.amazon.com/ko/premiumsupport/knowledge-center/users-connect-rds-iam/
+{{% /notice %}}
+
 ### 1. VPC 생성 
 1.1 AWS 콘솔에서 **Secret Manager** 메뉴로 이동하고 **Store a new secret**버튼을 클릭합니다.  
 
